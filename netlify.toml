@@ -1,0 +1,21 @@
+# Plain static site: no build step. Netlify serves this folder as-is.
+[build]
+  publish = "."
+
+# Old Wix URLs (no trailing slash) land on the same pages
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+[[redirects]]
+  from = "/schedule"
+  to = "/schedule/"
+  status = 301
+[[redirects]]
+  from = "/host"
+  to = "/host/"
+  status = 301
+[[redirects]]
+  from = "/attend"
+  to = "/attend/"
+  status = 301
