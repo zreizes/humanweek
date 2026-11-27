@@ -24,7 +24,7 @@ document.querySelectorAll('.tabs').forEach((tabs) => {
 
 // Tickers: repeat the items until one copy is wider than the screen, then
 // double it so the -50% scroll loops with no gap. Speed stays the same
-// however long the text is (about 60px a second).
+// however long the text is (about 30px a second).
 function fillTickers() {
   document.querySelectorAll('.ticker__track').forEach((t) => {
     if (!t.dataset.base) t.dataset.base = t.innerHTML;
@@ -34,7 +34,7 @@ function fillTickers() {
     while (t.scrollWidth < need && guard++ < 50) t.innerHTML += t.dataset.base;
     const half = t.scrollWidth;
     t.innerHTML += t.innerHTML;
-    t.style.animationDuration = (half / 60) + 's';
+    t.style.animationDuration = (half / 30) + 's';
   });
 }
 fillTickers();

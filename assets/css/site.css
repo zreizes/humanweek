@@ -145,7 +145,7 @@ h1, h2, h3 { margin: 0; }
   font-family: var(--font-display); font-weight: 900; text-transform: uppercase; color: var(--navy);
   font-size: var(--t-display); line-height: .98; margin: 0 0 var(--s4);
 }
-.display em { color: var(--purple); text-shadow: -4px 4px 0 var(--sage); }
+.display em { color: var(--purple); text-shadow: -4px 4px 0 var(--sage); white-space: nowrap; }
 .pixel-title {
   font-family: var(--font-pixel); font-weight: 700; text-transform: uppercase; line-height: 1.05;
   color: var(--purple); text-shadow: 4px 4px 0 var(--navy); letter-spacing: .04em; margin: 0;
@@ -281,36 +281,8 @@ h1, h2, h3 { margin: 0; }
 .intro-cloud, .footer-cloud-1 { animation-duration: 16s; }
 @keyframes drift { from { transform: translateX(-14px); } to { transform: translateX(22px); } }
 
-/* Disco ball over the Happy Human Hour photo */
-.disco-wrap { position: relative; padding-top: 136px; }
-.disco {
-  position: absolute; z-index: 2; top: -48px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; pointer-events: none;
-}
-.disco__string { width: 3px; height: 70px; background: var(--navy); }
-.disco__cap { width: 18px; height: 10px; background: var(--gray); border: 2px solid var(--navy); margin-bottom: -2px; }
-.disco__ball {
-  position: relative; width: 96px; height: 96px; border-radius: 50%; overflow: hidden;
-  border: 3px solid var(--navy); box-shadow: 5px 5px 0 var(--navy);
-  background: url("../img/pixel/disco-tiles.svg") 0 0 / 128px 96px repeat-x;
-  image-rendering: pixelated;
-  animation: disco-spin 4s linear infinite;
-}
-.disco__ball::after {
-  /* light from the top left, shadow bottom right, so it reads as a sphere */
-  content: ""; position: absolute; inset: 0; border-radius: 50%;
-  background: radial-gradient(circle at 32% 28%, rgba(255,255,255,.75) 0 8%, rgba(255,255,255,0) 30%),
-              radial-gradient(circle at 50% 50%, rgba(20,18,58,0) 52%, rgba(20,18,58,.45) 100%);
-}
-.disco__glint { position: absolute; width: 18px; image-rendering: pixelated; animation: twinkle 1.6s steps(2) infinite; }
-.disco__glint--1 { left: -30px; top: 92px; }
-.disco__glint--2 { right: -34px; top: 118px; animation-delay: .5s; }
-.disco__glint--3 { left: -8px; top: 176px; width: 14px; animation-delay: 1s; }
-@keyframes disco-spin { to { background-position: -128px 0; } }
-@keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: .15; } }
-
 @media (prefers-reduced-motion: reduce) {
-  .deco--cloud, .disco__ball, .disco__glint { animation: none; }
+  .deco--cloud { animation: none; }
 }
 
 /* ---------- Layout ---------- */
