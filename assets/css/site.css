@@ -442,3 +442,8 @@ h1, h2, h3 { margin: 0; }
   .taskbar .clock { margin-left: 0; }
 }
 .measure.center { margin-inline: auto; }
+
+/* Schedule recap note */
+.recap-note { max-width: 640px; margin-top: var(--s4); }
+.recap-note p { margin: 0; }
+.recap-note a { color: var(--blue); font-weight: 600; }
