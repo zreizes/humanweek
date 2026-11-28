@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thanks/
+Disallow: /_source/
+
+Sitemap: https://humanweek.org/sitemap.xml

@@ -128,6 +128,7 @@ def footer():
     <a class="start" href="/"><img src="/assets/img/favicon.svg" alt="" aria-hidden="true">Human Week</a>
     <a href="/about/">About</a>
     <a href="/attend/">Attend</a>
+    <a href="https://humanweek.beehiiv.com">Newsletter</a>
     <a href="https://www.instagram.com/bostonhumanweek">Instagram</a>
     <a href="https://www.linkedin.com/company/boston-human-week/">LinkedIn</a>
     <a href="{MAILTO}">Contact</a>
@@ -135,6 +136,7 @@ def footer():
   </nav>
 </footer>
 <script src="/assets/js/site.js"></script>
+<script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 </body>
 </html>
 '''
@@ -143,7 +145,23 @@ def footer():
 DEF = '<p class="definition"><b>pro-human</b> (adj.) — putting what people need to <span class="ink">live well</span> ahead of what a system needs to <span class="ink">grow</span>.</p>'
 
 
+SITE = 'https://humanweek.org'
+JSONLD = '''<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://humanweek.org/#org","name":"Human Week","alternateName":"Boston Human Week","url":"https://humanweek.org/","logo":"https://humanweek.org/assets/img/human-week-logo.png","email":"hello@humanweek.org","description":"A decentralized, pro-human conference in Boston for people, companies, and leaders who want the future to feel more human.","areaServed":{"@type":"City","name":"Boston"},"sameAs":["https://www.instagram.com/bostonhumanweek","https://www.linkedin.com/company/boston-human-week/","https://humanweek.beehiiv.com"]},
+ {"@type":"WebSite","@id":"https://humanweek.org/#site","url":"https://humanweek.org/","name":"Human Week","publisher":{"@id":"https://humanweek.org/#org"}}
+]}
+</script>'''
+
+
 def write(path, s):
+    url = SITE + '/' + path.replace('index.html', '')
+    extra = f'<link rel="canonical" href="{url}">\n<meta property="og:url" content="{url}">\n'
+    if path.startswith('thanks/'):
+        extra += '<meta name="robots" content="noindex">\n'
+    if path == 'index.html':
+        extra += JSONLD + '\n'
+    s = s.replace('</head>', extra + '</head>', 1)
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w').write(s)
