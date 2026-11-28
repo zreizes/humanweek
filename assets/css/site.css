@@ -447,3 +447,9 @@ h1, h2, h3 { margin: 0; }
 .recap-note { max-width: 640px; margin-top: var(--s4); }
 .recap-note p { margin: 0; }
 .recap-note a { color: var(--blue); font-weight: 600; }
+
+/* beehiiv embed inside the newsletter dialog */
+.beehiiv-embed { margin-top: var(--s4); min-height: 56px; }
+.beehiiv-embed iframe { max-width: 100%; }
+.form-note { font-size: var(--t-small); margin: var(--s3) 0 0; }
+.form-note a { color: var(--blue); font-weight: 600; }
