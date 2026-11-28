@@ -159,23 +159,20 @@ hero_copy = '''<p class="lead">Not anti-tech. Pro-human.</p>
       <p>We brought Boston five days of events about artificial intelligence, attention, the connection economy, and more.</p>
       <div class="btn-row"><a class="btn btn--lg" href="/schedule/">See the schedule</a><a class="btn btn--gray" href="/host/">Host a conversation</a></div>'''
 
-about_body = '''<p class="eyebrow">About</p>
-      <h2 class="h2">Boston Human Week 2026</h2>
+about_body = '''<h2 class="h2">Boston Human Week 2026</h2>
       <p>Human Week 2026 was a decentralized conference designed to facilitate discussion among people, companies, and leaders who want the future to feel more human.</p>
       <p>The guiding question is this: how do we structure society, technology, and our built environment to create a future where human needs are prioritized?</p>
       <p>Human Week brought the people building technology and the people living with it into the same room.</p>
       <p>Across the landscapes of artificial intelligence, climate change, social media, education, and more: if you’re a human, your authentic voice is welcomed and needed. And if you are a robot, well…please wait outside.</p>
       <div class="actions"><a class="btn" href="/schedule/">See the schedule</a></div>'''
 
-mission_body = '''<p class="eyebrow">Mission</p>
-      <h2 class="h2">Better events. Better conversations.</h2>
+mission_body = '''<h2 class="h2">Better events. Better conversations.</h2>
       <p>We have been to so many bad events that we now refer to them as "event slop." With Human Week, our mission is to fill a week with conversations that change your perspective(s), introduce you to someone new, and most importantly, are worth your (and our) precious time.</p>
       <p>We ask everyone who hosts during Human Week to start with a genuine question, to design for accessibility, and to put human needs first. That's it. What follows (we hope) is a week of rooms where people say what they believe, hear something they hadn't considered, and leave with new relationships, ideas, and excitement.</p>
       <p><em>Anyone with a stake in the future is welcome to host a Human Week conversation. As far as we can tell, that's everybody.</em></p>
       <div class="actions"><a class="btn btn--yellow" href="/host/">Host an event</a></div>'''
 
-vision_body = '''<p class="eyebrow">Vision</p>
-      <h2 class="h2">A simple standard</h2>
+vision_body = '''<h2 class="h2">A simple standard</h2>
       <p>Does a new technology or policy make life better for the people who have to live with it? Our vision for Human Week is to <em>inspire conversations that question what choices advance this standard.</em></p>
       <p>Human Week conversations should take a hopeful approach: there is no doom and gloom here. We believe that all things are possible when we set our minds to an outcome. We also believe that no technology is inherently bad, and that the structures, incentives, and regulations that surround them will shape whether humans flourish in the 21st century.</p>
       <div class="actions"><a class="btn" href="/about/">More about us</a></div>'''
@@ -197,12 +194,11 @@ gallery = ('<div class="address"><b>Address</b><span>C:\\Human Week\\2026\\Photo
            + tile('host_dinner_2.jpg', 'host_dinner_2.jpg', 'People listening around a long table at a host dinner')
            + '</div></div>')
 
-home = head('Human Week | Boston', 'Human Week is a decentralized conference for people, companies, and leaders who want the future to feel more human.') + header('Home') + f'''
+home = head('Human Week: Not anti-tech. Pro-human.', 'Human Week is a decentralized conference for people, companies, and leaders who want the future to feel more human.') + header('Home') + f'''
 <section class="hero">
   {deco('cloud', 'hero-cloud-1')}{deco('cloud', 'hero-cloud-2')}{deco('star', 'hero-star-1')}{deco('star', 'hero-star-2')}{deco('sparkle', 'hero-star-3')}
   <div class="wrap">
     <div>
-      <p class="meta">Boston, MA</p>
       <h1 class="hero__title"><span>Let's be</span><span class="human">Human</span><span>First<img class="hero__shades" src="{PX}shades.svg" alt="" aria-hidden="true"></span></h1>
     </div>
     {win('human_first.exe', hero_copy)}
@@ -240,7 +236,6 @@ home = head('Human Week | Boston', 'Human Week is a decentralized conference for
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Boston, MA</p>
       <h2 class="h2">Human Week 2026 in photos</h2>
     </div>
     <div class="win explorer win--yellow">{bar('Photos')}{gallery}</div>
@@ -286,14 +281,12 @@ about = head('About | Human Week', 'Human Week 2026 is a decentralized conferenc
 
 <section class="section section--pink">
   <div class="wrap grid-2">
-    {win('who_can_attend.txt', '''<p class="eyebrow">Who can attend?</p>
-      <h2 class="h2">Everyone. Genuinely.</h2>
+    {win('who_can_attend.txt', '''<h2 class="h2">Everyone. Genuinely.</h2>
       <p>Human Week is for anyone who is wondering what all of this — the algorithms, the automation, the always-on feeling — is doing to us. This is not an anti-technology space: it's a pro-Human one.</p>
       <p>Human Week takes a hopeful approach – there is no doom and gloom here. We believe that all things are possible when we set our minds to an outcome. We also believe that no technology is inherently bad, and that the structures, incentives, and regulations that surround them will shape whether or not humans flourish in the 21st century.</p>
       <p>Human Week is built for two crowds in the same room: the founders, operators, and builders who regularly attend tech events, and "everybody else" who live and engage with the new technologies and systems we are all experiencing in real time.</p>''', 'win--purple')}
     <div class="stack">
-      {win('organizers.txt', f'''<p class="eyebrow">About the organizers</p>
-        <p>Boston Human Week is brought to you by an ad hoc group of volunteer organizers from across the greater Boston area. As people who work at the intersection of technology and community, we are taking a pro-human position on the way we talk about AI, societal structures, and more.</p>
+      {win('organizers.txt', f'''<p>Boston Human Week is brought to you by an ad hoc group of volunteer organizers from across the greater Boston area. As people who work at the intersection of technology and community, we are taking a pro-human position on the way we talk about AI, societal structures, and more.</p>
         <p>Questions, compliments, press inquiries, and other requests can be directed to <a href="{MAILTO}">hello@humanweek.org</a></p>
         <div class="actions"><a class="btn" href="/schedule/">See all events</a></div>''', 'win--navy')}
       {paint('organizers.jpg', 'The four Human Week organizers together: Ang Richard, Zach Reizes, JAKE Small and Sarah Agopian-Khalifé', 'organizers.jpg', '', '50% 40%')}
@@ -328,8 +321,7 @@ for d, evs in days.items():
         items += f'<div class="event"><time>{e["start_et"]} – {e["end_et"]}</time><div><h3><a href="{e["luma_url"]}">{html.escape(e["event"])}</a></h3><p>{html.escape(meta)}</p></div></div>'
     label = dt.strftime("%A")
     blocks += win(label, items, 'day', tag='section')
-sched = head('Schedule | Human Week', 'The full schedule of Boston Human Week 2026.') + header('Schedule') + intro('''<p class="meta">Boston, MA</p>
-    <h1 class="display">Human Week Schedule</h1>
+sched = head('Schedule | Human Week', 'The full schedule of Boston Human Week 2026.') + header('Schedule') + intro('''<h1 class="display">Human Week Schedule</h1>
     ''' + notepad('thank_you.txt', '''<p>Boston Human Week took place from Nov. 9th – 13th, 2026. Thank you for joining us! You can view our schedule of past events below, and be sure to <a href="#newsletter">join our newsletter</a> for updates about where we’re headed next.</p>''', 'recap-note')) + f'''
 <section class="section">
   <div class="wrap">{paint('optimists_meetup.jpg', 'Attendees cheering together at the Optimists Meetup', 'optimists_meetup.jpg', 'paint--wide', '50% 48%')}</div>
@@ -369,13 +361,11 @@ host = head('Host | Human Week', 'Host a Human Week conversation. In an era of a
   </div>''') + f'''
 <section class="section">
   <div class="wrap grid-2">
-    {win('who_can_host.txt', '''<p class="eyebrow">Who can host?</p>
-      <h2 class="h2">Anyone. Mostly.</h2>
+    {win('who_can_host.txt', '''<h2 class="h2">Anyone. Mostly.</h2>
       <p>Our mission at Human Week is to fill a week with conversations that are worth your time to have: conversations that change your perspective, introduce you to someone new, and lead to inspiring, pro-human collaborations. So long as this calls to you, you are part of Human Week.</p>
       <p>We ask everyone who hosts during Human Week to start with a real question, take a clear stance, and put human needs first. That's it. What followed was a week of rooms where people said what they think, heard something they hadn't considered, and left with new relationships, ideas and excitement.</p>
       <p><em>Anyone with a stake in the future is welcome to host a Human Week conversation. As far as we can tell, that's everybody.</em></p>''', 'win--purple')}
-    {notepad('house_rules.txt', f'''<p class="eyebrow">Five house rules:</p>
-      <ol class="rules">
+    {notepad('house_rules.txt', f'''<ol class="rules">
         <li>Name the topic and why it matters</li>
         <li>Cut the industry jargon</li>
         <li>Design for participation</li>
