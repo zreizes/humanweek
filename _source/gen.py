@@ -57,6 +57,7 @@ def head(title, desc):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="aRXO_ohaVqQOov3g2UdZWSEKf7VvKd4vGLLowuqR4VE" />
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
